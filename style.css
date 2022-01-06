@@ -9,11 +9,16 @@ div {
     margin-top: 2%
 } */
 .sec1 {
-    background-color: aqua;
+    /* background-color: aqua; */
+    background-image: url(./jeju_origin_images/dive_back.png);
+    background-size: 100%;
 }
-.weatale {
-    background-color: orange;
-    border-radius: 40% 40% 0 0;
+.weat_ale {
+    /* background-color: orange; */
+    /* border-radius: 40% 40% 0 0; */
+    background-image: url(./jeju_origin_images/weat_back.png);
+    background-size: 100%;
+
 }
 
 /* slide */
