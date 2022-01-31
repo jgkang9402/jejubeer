@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@import url(reset.css);
+/*
+    vw,vh는 보이는 화면 기준
+    %는 싸고있는 박스기준
+    vw나vh는 왠만하면바깥쪽에쓰고
+    그안쪽세세한건 %나 픽셀로!
+ */
+
+body {
+    width: 100%;
+    /* width: calc(100vw - (100vw - 100%)); */
+    /* text-align: center; */
+    /* outline: 1px dotted red; */
+}
+
+
+/************* 상단 header 박스 *************/
+header {
+    /* margin: 0 auto; */
+    /* text-align: center; */
+}
+
+header .wb {
+    /* overflow: hidden; */
+    /* height: 135px; */
+}
+
+.outside_box {
+    max-width: 1200px;
+    height: 135px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* background-color: yellow; */
+    display: flex;
+    padding: 30px 0 30px 0;
+    /* text-align: center; */
+}
+
+/* 메인로고박스 */
+.part1 {
+    width: 400px;
+}
+
+.main-logo_box {
+    /* background: #000; */
+    /* margin-top: 42px; */
+    text-align: center;
+    /* outline: 1px dotted blue; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* outline: 1px solid red; */
+}
+
+.main-logo_box span {
+    /* display: inline-block; */
+    /* padding-right: 20px; */
+    /* height: 100%; */
+    /* background-color: red; */
+    /* margin: 0; */
+    /* height: 100%; */
+    /* outline: 1px solid blue; */
+}
+
+.main-logo_box a {
+    /* text-align: bottom; */
+    /* margin: 0; */
+    /* height: 100%; */
+    /* outline: 1px solid limegreen; */
+    /* margin-top: 5px; */
+}
+
+.main-logo_box img {
+    width: 119.73px;
+    vertical-align: bottom;
+    /* height: 100%; */
+    margin: 0;
+    /* outline: 1px solid red; */
+}
+
+/* 헤더 우측박스 */
+.right-wrapping_box {
+    text-align: end;
+    background-color: red;
+}
+
+.sub1_box {
+    height: 22.4px;
+    font-size: 12px;
+    /* outline: 1px solid blue; */
+}
+
+.sub1_box span {
+    /* outline: 1px solid red; */
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.sub1_box span:last-child {
+    margin: 0 0 0 10px;
+}
+
+.sub1_box span a {
+    color: #888888;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 550;
+
+}
+
+
+
+
+
+.sub2_box {
+    /* display: flex; */
+    margin-top: 23px;
+    font-size: 14px;
+    height: 30px;
+    background-color: limegreen;
+}
+
+.sub2_box .subwb {
+    display: flex;
+    justify-content: flex-end;
+    /* width: 255px; */
+    /* background-color: #fff; */
+}
+
+.color_box {
+    background-color: #10adb5;
+    margin-right: 10px;
+    height: 30px;
+    /* padding-top: 10px; */
+}
+
+.sub2_box div:last-child {
+    margin-right: 0;
+    /* background-color: red; */
+}
+.sub2_box .subwb .color_box a {
+    display: block;
+    height: 100%;
+}
+
+.sub2_box .subwb .color_box a span {
+    /* box-sizing: border-box; */
+    font-family: 'Black Han Sans', sans-serif;
+    padding: 4px 20px;
+    /* font-weight: 700; */
+    display: block;
+    color: #fff;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.sub2_box .sec1 {
+    /* background-color: aqua; */
+    background-image: url(./jeju_origin_images/dive_back.png);
+    background-size: 100%;
+}
+
+.weat_ale {
+    /* background-color: orange; */
+    /* border-radius: 40% 40% 0 0; */
+    background-image: url(./jeju_origin_images/weat_back.png);
+    background-size: 100%;
+
+}
