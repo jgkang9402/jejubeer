@@ -20,6 +20,7 @@ body {
 header {
     /* margin: 0 auto; */
     /* text-align: center; */
+    /* margin-bottom: 20px; */
 }
 
 header .wb {
@@ -85,7 +86,7 @@ header .wb {
 /* 헤더 우측박스 */
 .right-wrapping_box {
     text-align: end;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .sub1_box {
@@ -107,34 +108,42 @@ header .wb {
 .sub1_box span a {
     color: #888888;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 550;
-
+    font-weight: 600;
 }
-
-
-
-
+.sub1_box span a:hover {
+    color: rgba(136, 136, 136, 0.5);
+    transition: .3s;
+    
+}
 
 .sub2_box {
     /* display: flex; */
     margin-top: 23px;
     font-size: 14px;
     height: 30px;
-    background-color: limegreen;
+    /* background-color: limegreen; */
+    display: flex;
+    justify-content: flex-end;
 }
-
 .sub2_box .subwb {
     display: flex;
     justify-content: flex-end;
-    /* width: 255px; */
-    /* background-color: #fff; */
+    width: 255px;
+    /* background-color: coral; */
+    float: right;
 }
 
 .color_box {
-    background-color: #10adb5;
-    margin-right: 10px;
+    /* background-color: #10adb5; */
+    background-color: #1ecad3;
+    margin: 0 5px;
     height: 30px;
     /* padding-top: 10px; */
+    box-sizing: border-box;
+}
+.color_box:hover {
+    background-color: #10adb5;
+    transition: .3s;
 }
 
 .sub2_box div:last-child {
@@ -143,22 +152,73 @@ header .wb {
 }
 .sub2_box .subwb .color_box a {
     display: block;
+    padding: 4px 20px;
     height: 100%;
+    /* width: 100%; */
 }
-
 .sub2_box .subwb .color_box a span {
     /* box-sizing: border-box; */
     font-family: 'Black Han Sans', sans-serif;
-    padding: 4px 20px;
     /* font-weight: 700; */
     display: block;
     color: #fff;
-    height: 100%;
+    margin-top: 3px;
+    /* height: 100%; */
+    letter-spacing: 0.7px;
 }
 
+/* 네브박스 */
+nav {
+    height: 63px;
+}
+.navin {
+    margin: 0 auto;
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    /* box-sizing: border-box; */
+    width: 927px;
+}
+
+.navin li {
+    /* outline: 1px dotted; */
+    /* float: left; */
+    font-size: 14.2px;
+    font-weight: bold;
+    letter-spacing: .2px;
+    height: 40px;
+    /* padding-left: 3px; */
+
+}
+.navin li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 50px;
+    box-sizing: border-box;
+    color: #55585b;
+}
+.navin li a:hover {
+    color: rgba(33, 33, 33, 0.5);
+    transition: .3s;
+}
+.navin li a span {
+    padding-left: 2px;
+    display: block;
+    padding-top: 10px;
+}
+/* 헤더파트 끝 */
 
 
-
+/* 메인파트 */
+/* 비디오박스 */
+.vidbox{
+    /* background-color: yellow; */
+    /* width: 100vw; */
+}
+video {
+    width: 100%;
+}
 
 
 
