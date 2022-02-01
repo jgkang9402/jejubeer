@@ -212,23 +212,66 @@ nav {
 
 /* 메인파트 */
 /* 비디오박스 */
-.vidbox{
+.vid-dive_box{
     /* background-color: yellow; */
     /* width: 100vw; */
 }
 video {
     width: 100%;
 }
-
-
-
-
-
-.sub2_box .sec1 {
-    /* background-color: aqua; */
-    background-image: url(./jeju_origin_images/dive_back.png);
-    background-size: 100%;
+/* 다이빙파트 */
+.dive_box::before {
+    content: '';
+    display: block;
+    height: 63px;
+    width: 100%;
+    /* background-color: lightgray; */
 }
+.dive_box {
+    /* height: 272px; */
+    height: auto;
+    /* background-color: yellow; */
+    /* 
+    min-height: 1px;
+    height: 63px;
+    */
+    text-align: center;
+}
+.dive_box img {
+    width: 734px;
+    height: 209px;
+    /* margin: 0 auto; */
+    /* outline: 1px solid; */
+}
+/* 유튜브&파도배경파트 */
+.wave_box {
+    /* background-color: aqua; */
+    background: url(/jeju_origin_images/dive_back.png) no-repeat center;
+    /* background-size: 100%; */
+    height: 1056px;
+    width: auto;
+    /* text-align: center; */
+}
+.youtube_box::before {
+    content: '';
+    width: 100%;
+    height: 253px;
+    display: block;
+}
+.youtube_box {
+    width: 1200px;
+    height: 675px;
+    margin: 0 auto;
+}
+.youtube_box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
 
 .weat_ale {
     /* background-color: orange; */
