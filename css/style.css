@@ -13,6 +13,8 @@ body {
     /* width: calc(100vw - (100vw - 100%)); */
     /* text-align: center; */
     /* outline: 1px dotted red; */
+    /* overflow-y: hidden; */
+
 }
 
 
@@ -21,6 +23,8 @@ header {
     /* margin: 0 auto; */
     /* text-align: center; */
     /* margin-bottom: 20px; */
+    position: relative;
+    top: 0;
 }
 
 header .wb {
@@ -210,11 +214,27 @@ nav {
 /* 헤더파트 끝 */
 
 
-/* 메인파트 */
+/************************** 메인파트 **************************/
+.main {
+    position: relative;
+    
+}
+
+
+
+
+.maintop {
+    position: relative;
+    
+}
+
+
 /* 비디오박스 */
 .vid-dive_box{
     /* background-color: yellow; */
     /* width: 100vw; */
+    position: relative;
+    
 }
 video {
     width: 100%;
@@ -245,13 +265,18 @@ video {
 }
 /* 유튜브&파도배경파트 */
 .wave_box {
-    background: url(/jeju_origin_images/dive_back.png) no-repeat center;
+    background-image: url(/jeju_origin_images/dive_back.png);
     /* background-color: aqua; */
     /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
     height: 1056px;
     width: auto;
     /* text-align: center; */
     margin-bottom: 0;
+    border: 0px;
 }
 .youtube_box::before {
     content: '';
@@ -270,12 +295,156 @@ video {
 }
 
 
-/* 위트에일 파트 */
-.weat_ale {
+
+.beer_wrap {
+    position: relative;
+    height: 1535px;
+    
+}
+
+.bg {
     /* background-color: orange; */
     /* border-radius: 40% 40% 0 0; */
-    margin-top:0;
-    background-image: url(/jeju_origin_images/weat_back.png);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    /* margin-top: -3px;  */
+    /* margin-top에 마이너스줘서 위에박스와 여백 없앰 */
+    
+}
+/* 위트에일 파트 */
+.weat_ale {
+    background-image: url(/imges/weat_back.png);
+    /* top: 0; */
+}
+/* 펠롱에일 파트 */
+.pellong_ale {
+    background-image: url(/imges/pellong_back.png);
+}
+/* 거멍에일 */
+.geomeong_ale {
+    background-image: url(/imges/geomeong_back.png);
+    /* bottom: 0;
+    left: 0; */
+    /* height: 120%; */
+}
 
+
+
+.lg {
+    width: 50%;
+    height: 110px;
+    margin: 0 auto;
+    text-align: center;
+    /* margin-top: 45px; */
+    padding-top: 45px;
+}
+.lg img {
+    width: auto;
+    height: 110px;
+}
+
+.infobox {
+    /* outline: 1px solid; */
+    width: 1200px;
+    height: 309px;
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+}
+.imgbox {
+    height: 309px;
+    margin-left: 100px;
+}
+.imgbox img {
+    height: 309px;
+}
+.binfo {
+    margin-left: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+.binfo span {
+    font-size: 24px;
+}
+
+.slide1 {
+    /* outline: 1px solid yellow; */
+    position: relative;
+    width: 1200px;
+    height: 615px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    margin-left: 23%;
+    /* margin: 0 auto; */
+    float: left;
+}
+.slide_imgbox1 {
+    /* display: flex; */
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    /* padding: 10px; */
+    /* top: 0; */
+    /* left: 0; */
+
+    /* margin: 0 auto; */
+    /* overflow: hidden; */
+    /* outline: 2px solid lime; */
+}
+.slide_imgbox1 li {
+    width: 25%;
+    height: 100%;
+
+    /* box-sizing: border-box */
+}
+.slide_imgbox1 li img {
+    width: 1000px;
+    height: 100%
+    /* object-fit: cover; */
+}
+
+
+
+.slide_imgbox2 {
+    float: left;
+    width: 400%;
+    height: 216px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 23%;
+    /* clear: both;
+    display: inline-block; */
+}
+.slide_imgbox2 li {
+    width: 287px;
+    height: 216px;
+
+}
+.slide_imgbox2 li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+
+
+.mainbottom {
+    outline: 2px solid rgba(10, 10, 100, #000);
+    background: #000;
+    width: 100%;
+    height: 285px;
+    z-index: 9999999;
 }
