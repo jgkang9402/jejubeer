@@ -1,60 +1,95 @@
-window.addEventListener("load", function () {
+// window.addEventListener("load", () => {
+    
+let slides = document.querySelector(".slides",".slides2");
+let slideList = document.querySelectorAll(".slides li",".slides2 li");
+let currentIdx = 0;
+let slideLength = slideList.length;
+let slideWidth = 1000;
+let slideMargin = 0;
+let nextbtn = document.querySelector(".ri");
+let prevbtn = document.querySelector(".li");
 
-    let nbtn = document.querySelectorAll(".ri");
-    let pbtn = document.querySelectorAll(".li");
-    let slide = document.querySelectorAll(".slide_imgbox1");
+// console.log(slideLength)
+// console.log(slides)
+console.log(slideList)
+// console.log(currentIdx)
+// console.log(slideWidth)
+// console.log(slideMargin)
+// console.log(prevbtn)
+// console.log(nextbtn)
 
-    for (let x of slide) {
+function makeClone() {
+    for (let i = 0; i < slideLength; i++) {
+        // console.log(i)
+        let cloneSlide = slideList[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        slides.appendChild(cloneSlide)
+        // console.log(cloneSlide)
+    }
 
-        x.style.width = "400%";
+    for (let i = slideLength - 1; i >= 0; i--){
+        let cloneSlide = slideList[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        slides.prepend(cloneSlide)
+    }
+
+    updateWidth();
+    setSlideTotalWidth();
+
+    setTimeout(function(){
+        slides.classList.add('animated');
+    },100)
+
+
+};
+
+
+function updateWidth() {
+    let currentSlides = document.querySelectorAll(".slides li",".slides2 li")
+    let newSlideCount = currentSlides.length
+
+    let newWidth = (slideWidth + slideMargin) * newSlideCount - slideMargin +"px";
+
+    slides.style.width = newWidth;
+}
+
+
+function setSlideTotalWidth(){
+    let slideTotalWidth = -(slideWidth + slideMargin) * slideLength
+    slides.style.transform = `translateX(${slideTotalWidth}px)`
+    
+    
+}
+
+nextbtn.addEventListener('click', function () {
+    moveSlide(currentIdx + 1); // 클릭시 moveSlide라는 함수에 숫자를 넘겨주는것
+});
+prevbtn.addEventListener('click', function () {
+    moveSlide(currentIdx - 1); // 클릭시 moveSlide라는 함수에 숫자를 넘겨주는것
+});
+
+
+function moveSlide(num){
+    slides.style.left = -num * (slideWidth + slideMargin) + "px"
+    currentIdx = num;
+    console.log(currentIdx,slideLength)
+
+    if (currentIdx == slideLength || currentIdx == -slideLength){
+        setTimeout(function(){
+            slides.classList.remove('animated');
+            slides.style.left ='0px';
+            currentIdx = 0
+        },500);
+        setTimeout(function(){
+            slides.classList.add('animated');
+
+        },550);
+
     }
 
 
-
-    const goSlide = (dir, seq) => {
-        console.log("go", dir, seq);
-        // seq가 각 슬라이드의 순번임
-        // dir은 버튼구분(1-오른쪽,0-왼쪽)
-
-        if (dir) {
-            slide[seq].style.left = "-100%";
-            slide[seq].style.transition = ".7s";
-            setTimeout(() => {
-                slide[seq].appendChild(slide[seq].querySelector("li"));
-                slide[seq].style.left = "0";
-                slide[seq].style.transition = "none";
-            }, 700);
-        } else {
-            slide[seq].insertBefore(
-                slide[seq].querySelectorAll("li")[3],
-                slide[seq].querySelectorAll("li")[0]);
-            slide[seq].style.left = "-100%";
-            slide[seq].style.transition = "none";
-
-            setTimeout(() => {
-                slide[seq].style.left = "0";
-                slide[seq].style.transition = ".7s";
-            }, 10);
-        }
+}
 
 
-    }
-
-    for (let i = 0; i < nbtn.length; i++) {
-        nbtn[i].onclick = () => {
-            goSlide(1, i);
-        }
-    }
-
-
-    for (let i = 0; i < pbtn.length; i++) {
-        pbtn[i].onclick = () => {
-            goSlide(0, i);
-        }
-    }
-
-
-
-
-
-})
+makeClone()
+// }); ///////// load ////////////
