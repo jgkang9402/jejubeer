@@ -54,9 +54,7 @@ window.addEventListener("load", function () {
     }
 
 
-    
-    
-    
+
+
+
 })
-
-

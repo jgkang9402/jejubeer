@@ -1,0 +1,99 @@
+@import url(./reset.css);
+* {
+    /* outline: 1px solid red; */
+    /* font-family: 'Ubuntu', sans-serif; */
+
+}
+
+.sub-menu {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: antiquewhite; */
+    padding: 0 20px;
+    box-sizing: border-box;
+    /* position: fixed; */
+    /* z-index: 0; */
+}
+.sub-header {
+    position: relative;
+    height: 90px;
+
+}
+.sub-logo {
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+}
+.sub-logo div {
+    /* border: 1px solid blue; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.sub-logo div img {
+    width: 81px;
+    height: 19px;
+}
+
+.sub-login {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    height: 40px;
+    align-items: center;
+}
+
+.sub-main {
+    border: 1px solid red;
+    height: 80vh;
+    /* position: relative; */
+
+}
+.sub-main * {
+    padding: 5px 0 5px 0;
+}
+.sub-wrap {
+    height: 50vh;
+    border: 1px solid yellow;
+}
+.sub-big {
+    color: #555555;
+    font-size: 25px;
+    font-weight: bold;
+}
+.sub-big :nth-child(5) { 
+    border-top: 2px solid aqua; 
+    border-bottom: 2px solid aqua; 
+}
+.sub-small {
+    font-size: 22px;
+    font-weight: bold;
+    color: #555555;
+    font-family: 'Ubuntu', sans-serif;
+}
+.sub-iconbox {
+    display: flex;
+    justify-content: space-between;
+    height: 52px;
+    align-items: center;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+.sub-iconbox > img {
+    height: 32px;
+}
+.sub-iconbox div {
+    padding-right: 20px;
+}
+.sub-iconbox div img {
+    height: 32px;
+}
+
+
+.sub-footer {
+    height: 50px;
+    background-color: aqua;
+}
+
+
+
