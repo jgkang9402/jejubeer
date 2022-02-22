@@ -31,23 +31,23 @@ window.addEventListener("load", function () {
 
 ///////// 강사님 방법은 부모상자를 한개 더만들어서 가운데쪽에 위치하게하고 그만든상자를 기준으로 슬라이드가 움직이게 만듦.
         if(dir){
-            slide[seq].style.left = "-900px"; // 사진 가로길이를 300이라고 잡았을때 처음에 사진이 두개가 나가있어야 우측버튼을 눌러 움직이면서 빈칸이 남지않게할 수 있다 
+            slide[seq].style.left = "-600px"; // 사진 가로길이를 300이라고 잡았을때 처음에 사진이 두개가 나가있어야 우측버튼을 눌러 움직이면서 빈칸이 남지않게할 수 있다 
             slide[seq].style.transition = ".5s";
 
             this.setTimeout(()=>{
                 slide[seq].appendChild(slide[seq].querySelector("li"))
-                slide[seq].style.left = "-600px";
+                slide[seq].style.left = "-300px";
                 slide[seq].style.transition = "none";
             },500)
         } else {
             slide[seq].insertBefore(
                 slide[seq].querySelectorAll("li")[7],
                 slide[seq].querySelectorAll("li")[0]);
-            slide[seq].style.left = "-900px"
+            slide[seq].style.left = "-600px"
             slide[seq].style.transition = "none";
             
             this.setTimeout(()=>{
-                slide[seq].style.left = "-600px";
+                slide[seq].style.left = "-300px";
                 slide[seq].style.transition = ".5s";
             },10)
         }
