@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url(style.css);
+@import url(media.css);
+@import url(reset.css);
+
+.scont{
+    padding-bottom: 100px;
+}
+
+.stit{
+    font-family: "Ubuntu";
+    font-size: 50px;
+    padding: 40px 0 20px;
+    text-align: center;
+    font-weight: normal;
+    color: #1ecad3;
+    border-top: 1px solid #55585b;;
+}
+
+#login{
+    position: relative;
+    width: 700px;
+    height: 275px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid #1ecad3;
+    border-radius:10px;
+    box-sizing: border-box;
+    padding: 60px 15px;
+}
+
+.minput label{
+    display: inline-block;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1ecad3;
+    text-align: center;
+    line-height: 36px;
+}
+
+.minput input{
+    width: 320px;
+    height: 36px;
+    border: 1px solid #1ecad3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding-left: 5px;
+    color: #666;
+}
+.mi2{
+    margin-top: 20px;
+}
+input:focus{
+    outline: none;
+}
+.btnbx{
+    position: absolute;
+    top: 60px;
+    right: 40px;
+}
+#sbtn{
+    width: 113px;
+    height: 92px;
+    border: 1px solid #1ecad3;
+    border-radius: 5px;
+    background-color: #1ecad3;
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #666;
+    cursor: pointer;
+}
+#sbtn:hover{
+    background-color: azure;
+    color: aqua;
+    border: 3px solid ;
+    transition: .5s ease-out;
+}
+.addbx{
+    margin-top: 50px;
+    text-align: center;
+}
+.addbx span{
+    margin: 0 15px;
+    color: #666;
+}
+.addbx input{
+    vertical-align: -2px;
+}
+.addbx a{
+    margin: 0 15px;
+}
